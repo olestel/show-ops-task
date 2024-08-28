@@ -1,0 +1,130 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.footerLink {
+  color: #006514D5;
+  cursor: pointer;
+}
+
+.footerLinkDark {
+  color: #89FF9FCD;
+  cursor: pointer;
+}
+
+.logo {
+  margin: 18px 10px;
+}
+
+.darkLogo path {
+  fill: #1D211C;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  color: #89ff9f9c;
+}
+
+.footerLinkDark:hover {
+  color: #006514D5;
+}
+
+.menuItem {
+  border-radius: 6px;
+}
+
+.menuItem svg path {
+  fill: #F0FDEC74;
+}
+
+.menuItemLight svg path {
+  fill: #040E0082;
+}
+
+.menuItemLight {
+  color: #040E0082;
+  border-radius: 6px;
+}
+
+.menuItemLight:hover {
+  background: #00200010;
+  color: #1D211C;
+}
+.menuItemLight:hover svg path {
+  fill: #1D211C;
+}
+
+.menuItem:hover {
+  background: #7e807e3a;
+}
+
+.activeItem {
+  background: #70FE8C1B !important;
+  color: #89FF9FCD;
+}
+
+.activeItem svg path {
+  fill: #fff !important;
+}
+
+.lightActiveItem {
+  background: #00970016 !important;
+  color: #006514D5 !important;
+}
+
+.lightActiveItem svg path {
+  fill: #006514D5 !important;
+}
+
+.eventsTitle {
+  color: #EDFDEB57;
+  padding: 4px 16px;
+}
+
+.lightEventsTitle {
+  color: #040F0047;
+}
+
+.eventsItem:hover {
+  background: #7e807e3a;
+  border-radius: 6px;
+}
+
+.eventsItemLight:hover {
+  background: #00200010;
+  border-radius: 6px;
+}
+
+.headerNotification {
+  border-radius: 6px;
+  background: #F4F5F312;
+}
+
+.headerNotification:hover {
+  background: #f4f5f356;
+}
+
+.headerLightNotification {
+  border-radius: 6px;
+  background: #00200010;
+}
+
+.headerLightNotification:hover {
+  background: #F4F5F312;
+}
+
+.searchLight path {
+  fill: #020A00A0;
+}
+
+.shiftTabLight path {
+  fill: #1D211C;
+}

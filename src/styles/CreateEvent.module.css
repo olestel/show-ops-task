@@ -1,0 +1,61 @@
+.subTitle {
+  color: #F6FEF4B0;
+}
+
+.lightSubTitle {
+  color: #020A00A0;
+}
+
+.createBtn {
+  background: #70FE8C1B;
+  color: #89FF9FCD;
+  cursor: pointer;
+}
+
+.createBtn:hover {
+  background: #70fe8c52;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: #AFB5AD;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #afb5ad3b;
+}
+
+.textField {
+  background: #F4F5F312;
+  box-shadow: none;
+}
+
+.lightTextField {
+  background: #00200010;
+  box-shadow: none;
+}
+
+.lightTextField svg path {
+  fill: #020A00A0;
+}
+
+.lightCreateBtn {
+  background: #00970016;
+  color: #006514D5;
+  cursor: pointer;
+}
+
+.lightCreateBtn:hover {
+  background: #0097004d;
+}
+
+.lightCancelBtn {
+  background: transparent;
+  color: #60655F;
+  cursor: pointer;
+}
+
+.lightCancelBtn:hover {
+  background: #afb5ad3b;
+}
