@@ -16,12 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       #INSTALL NODEJS & NPM ON VERCEL
-      - uses: actions/checkout@v2
-      - name: Install Node.js
-
-      - uses: actions/setup-node@v3
-      - name: Install npm
-
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
