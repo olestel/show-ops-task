@@ -59,3 +59,323 @@
 .lightCancelBtn:hover {
   background: #afb5ad3b;
 }
+
+.select {
+  display: flex;
+  background: #F4F5F312;
+  box-shadow: none;
+  cursor: pointer;
+  width: 49%;
+}
+
+.select svg path {
+  fill: #FFFFFF;
+}
+
+.select svg {
+  margin-right: 8px;
+}
+
+.select span > span {
+  display: flex;
+  align-items: center;
+}
+
+.lightSelect {
+  display: flex;
+  background: #00200010;
+  box-shadow: none;
+  cursor: pointer;
+  width: 49%;
+}
+
+.lightSelect svg {
+  margin-right: 8px;
+}
+
+.lightSelect span > span {
+  display: flex;
+  align-items: center;
+}
+
+.datePicker input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  border: none;
+  background: #F4F5F312;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.datePicker svg path {
+  fill: #FFFF;
+}
+
+.datePicker div svg {
+  margin-left: 6px;
+  margin-top: 4px;
+}
+
+.lightDatePicker input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  border: none;
+  background: #00200010;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.lightDatePicker svg path {
+  fill: #1D211C;
+}
+
+.lightDatePicker div svg {
+  margin-left: 6px;
+  margin-top: 4px;
+}
+
+.dragAndDrop {
+  background: #F4F5F312;
+  border-radius: 6px;
+  padding: 16px 8px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #EBFDE766;
+}
+
+.dragAndDrop input[type="file"] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.dragAndDrop span {
+  max-width: 380px;
+}
+
+.dragAndDrop:hover {
+  background: #f4f5f336;
+}
+
+.lightDragAndDrop {
+  background: #00200010;
+  border-radius: 6px;
+  padding: 16px 8px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #050F0078;
+}
+
+.lightDragAndDrop input[type="file"] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.lightDragAndDrop span {
+  max-width: 380px;
+}
+
+.lightDragAndDrop:hover {
+  background: #0020002c;
+}
+
+.imageContainer button {
+  margin-bottom: 12px;
+  background: #F3000D14;
+  cursor: pointer;
+}
+
+.imageContainer button:hover {
+  background: #f3000c2a;
+}
+
+.bannerImage img {
+  border-radius: 4px;
+}
+
+.closeDialogBtn {
+  background: #afb5ad3b;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.closeDialogBtn:hover {
+  background: #afb5ad79;
+}
+
+.closeLightDialogBtn {
+  background: #00200010;
+  color: #60655F;
+  cursor: pointer;
+}
+
+.closeLightDialogBtn:hover {
+  background: #afb5ad52;
+}
+
+.deleteDialogBtn {
+  background: #E5484D;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.deleteDialogBtn:hover {
+  background: #e5484d7c;
+}
+
+.rootDarkBg {
+  background: #181917;
+}
+
+.rootLightBg {
+  background: #FFFFFF;
+}
+
+.Viewport {
+  --viewport-padding: 32px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--viewport-padding);
+  padding-top: 102px;
+  gap: 10px;
+  width: 480px;
+  max-width: 100vw;
+  margin: 0;
+  list-style: none;
+  z-index: 2147483647;
+  outline: none;
+}
+
+.Root {
+  border: 1px solid #F4FAED2C;
+  border-radius: 6px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  padding: 12px 7px 12px 16px;
+  display: grid;
+  grid-template-areas: 'title action' 'description action';
+  grid-template-columns: auto max-content;
+  column-gap: 15px;
+  align-items: center;
+  &[data-state='open'] {
+    animation: slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  &[data-state='closed'] {
+    animation: hide 150ms ease-in;
+  }
+  &[data-swipe='move'] {
+    transform: translateX(var(--radix-toast-swipe-move-x));
+  }
+  &[data-swipe='cancel'] {
+    transform: translateX(0);
+    transition: transform 200ms ease-out;
+  }
+  &[data-swipe='end'] {
+    animation: swipeOut 100ms ease-out;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(calc(100% + var(--viewport-padding)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swipeOut {
+  from {
+    transform: translateX(var(--radix-toast-swipe-end-x));
+  }
+  to {
+    transform: translateX(calc(100% + var(--viewport-padding)));
+  }
+}
+
+.Title {
+  grid-area: title;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--slate-12);
+  font-size: 15px;
+}
+
+.Description {
+  grid-area: description;
+  margin: 0;
+  color: var(--slate-11);
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.Action {
+  grid-area: action;
+  margin-right: 38px;
+  background: none;
+  border: none;
+  color: #89FF9FCD;
+  cursor: pointer;
+}
+
+.Action:hover {
+  color: #89ff9f9a;
+}
+
+.CloseAction {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  right: 37px;
+}
+
+.gif {
+  position: fixed;
+  top: 0;
+  right: 137px;
+}
+
+.error {
+  border: 1px solid #FF5D61B0;
+}
+
+.errorColor {
+  color: #FF5D61B0;
+}
